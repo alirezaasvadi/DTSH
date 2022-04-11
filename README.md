@@ -5,10 +5,11 @@ A proof of concept of a DT-driven smart home powered by several packages from RO
 ## How the smart home model is created in Gazebo?
 The steps of the creation of a smart home model are defined as follows. 
 The smart home is scanned using a hand-held RGB-D camera and a SLAM algorithm (RTAB-Map) to build a 3D reconstruction of it. 
-A modeling software (Blender) is used to construct the CAD models of the home and objects inside it from the scan. The CAD models (augmented with different properties, for example, being static or movable) are imported into a robotic simulator (Gazebo). <!-- A TurtleBot model in URDF format is spawn into the simulator. --> A proof-of-concept is developed (using YOLO-v3 and Darknet ROS 3D) to enable semantic understanding of objects. 
+A modeling software (Blender) is used to construct the CAD models of the home and objects inside it from the scan. The CAD models (augmented with different properties, for example, being static or movable) are imported into a robotic simulator (Gazebo). <!-- A TurtleBot model in URDF format is spawn into the simulator. --> A proof-of-concept is developed (using YOLO-v3 and Darknet ROS 3D) to enable semantic understanding of objects. A TurtleBot model in URDF format is spawn into the simulator.
 
 ## The smart home file <!-- roslaunch turtlebot_gazebo my_turtlebot_world.launch -->
-The smart home file is in WORLD format. It is a format that can be directly read by Gazebo.
+To start the simulated smart home you need to run `smart_home.launch`. It will launch Gazebo with the smart home model (`simple_world_v2.world`) and a Turtlebot model. The smart home file is in WORLD format . 
+<!-- that can be directly read by Gazebo (it is `simple_world_v2.world` which will be loaded using the launch file). -->
 
 
 
