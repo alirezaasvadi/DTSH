@@ -16,7 +16,7 @@ Different file formats are required to build the smart home model including URDF
 **SDF:** defined to solve the problems with URDF and can be used to describe both a robot and a world.  
 **WORLD:** directly can be read by ROS or Gazebo. Similar to SDF but unlike SDF can't be reused/included in another file of the same type.  
 **DAE:** called Collada format, and it is to represent a 3D CAD model (like as STL format).  
-*The DAE files has no properties, they are required to be loaded in the SDF format and to be augmented with different properties such as collision, visual, world, scene, physics, light, actor, model, link, sensor, joint, material, geometry, etc.*
+*The DAE files has no properties, they are required to be loaded in the SDF format and to be augmented with different properties such as collision, visual, world, scene, physics, light, actor, model, link, sensor, joint, material, geometry, etc. More information about SDF format in: http://sdformat.org/spec*
 
 
 
