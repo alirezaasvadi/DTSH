@@ -8,9 +8,7 @@ The smart home is scanned using a hand-held RGB-D camera and a SLAM algorithm (R
 A modeling software (Blender) is used to construct the CAD models of the home and objects inside it from the scan. The CAD models (augmented with different properties, for example, being static or movable) are imported into a robotic simulator (Gazebo). <!-- A TurtleBot model in URDF format is spawn into the simulator. --> A proof-of-concept is developed (using YOLO-v3 and Darknet ROS 3D) to enable semantic understanding of objects. A TurtleBot model in URDF format is spawn into the simulator.
 
 ## The smart home file <!-- roslaunch turtlebot_gazebo my_turtlebot_world.launch -->
-To start the simulated smart home you need to run `smart_home.launch`. It will launch Gazebo with the smart home model (`simple_world_v2.world`) and a Turtlebot model. The smart home file is in WORLD format.<!-- that can be directly read by Gazebo (it is `simple_world_v2.world` which will be loaded using the launch file). -->
-
-
+To start the simulated smart home you need to run `smart_home.launch`. It will launch Gazebo with the smart home model (`simple_world_v2.world`) and a Turtlebot model. The smart home file is in WORLD format.<!-- that can be directly read by Gazebo (it is `simple_world_v2.world` which will be loaded using the launch file). --> It consists of the address to all 3D CAD models of the elements in the smart home (including wall, cabinet, chair, sofa, table, etc) with the associated properties (including being movable or static, collision and visual properties, etc)
 
 ## A note on different file formats
 Different file formats are required to build the smart home model including URDF, SDF, WORLD, and DAE.  
@@ -19,4 +17,3 @@ Different file formats are required to build the smart home model including URDF
 **WORLD:** directly can be read by ROS or Gazebo. Similar to SDF but unlike SDF can't be reused/included in another file of the same type.  
 **DAE:** called Collada format, and it is to represent a 3D model (like as STL format).  
 *The DAE files has no properties, they are required to be loaded in the SDF format and to be augmented with different properties such as collision, visual, world, scene, physics, light, actor, model, link, sensor, joint, material, geometry, etc.*
-
