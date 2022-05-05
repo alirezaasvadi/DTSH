@@ -9,6 +9,32 @@ A modeling software (Blender) is used to construct the CAD models of the home an
 
 ![picture2](https://github.com/alirezaasvadi/DTSH/blob/main/2022-05-05%2016-07-33.png)
 
+## The Protocol for the Creation of the Digital Twin
+
+# Camera Calibration. 
+The Orbbec Astra Pro sensor was used. %It has a perception range between 0.6m to 8m. 
+The resolution for both the RGB and depth images was set to $640 \times 480$ pixels. The \textit{camera\_calibration} ROS package\footnote{\href{http://wiki.ros.org/camera_calibration}{http://wiki.ros.org/camera\_calibration}} was used for the intrinsic camera calibration.
+
+# 3D Reconstruction. 
+The \textit{rtabmap\_ros} package\footnote{\href{http://wiki.ros.org/rtabmap_ros}{http://wiki.ros.org/rtabmap\_ros}} was used to create the 3D map of the smart home. It outputs a dense 3D map of the environment in the form of point cloud data in \textit{.PLY} or \textit{.PCD} formats.
+A simplified mesh can be generated using ball-pivoting surface reconstruction \cite{bernardini1999ball} function of Meshlab\footnote{\href{http://www.meshlab.net}{http://www.meshlab.net}}. Another alternative is the marching cubes algorithm, at the cost of losing color data.
+
+# CAD Model Creation. 
+This step is to convert the obtained point cloud (or mesh) to object-level CAD models of the home items and home's frame.
+Online public repositories\footnote{\href{https://free3d.com}{https://free3d.com}}\footnote{\href{https://3dwarehouse.sketchup.com}{https://3dwarehouse.sketchup.com}} were used to obtain the CAD models of home items. The models are modified in Blender\footnote{\href{https://www.blender.org/}{https://www.blender.org/}} to best represent (\ie, to have the same shape and size) the physical objects.
+They were created in \textit{COLLADA (COLLAborative Design Activity)} format, \ie, a set of \textit{.DAE} files.
+
+# Digital 3D Model.
+Gazebo was used as the physics-based simulator. 
+A digital 3D model is created in \textit{SDFormat (Simulation Description Format)}\footnote{\href{http://sdformat.org}{http://sdformat.org}} format in a \textit{.WORLD} file. 
+It consists of the addresses to DAE files (\eg, wall, cabinet, chair, sofa, table, etc) from the previous step. The DAE files (\ie, the CAD models) were used to define the visual and collision properties of the objects and were augmented with other properties such as being static or movable, object pose, etc. For example, the home frame is static and is populated by movable objects (\eg, chairs). The poses of objects were attained using Blender from previous step. %The result in \textit{.WORLD} file is the smart home model.
+
+# Digital Model including a Robot.
+A file in \textit{.LAUNCH} format is required to start the Gazebo simulator with the created smart home model and a spawned Turtlebot model of \textit{Unified Robot Description Format (URDF)}.
+Therefore, the file comprises two sections: i) to launch the created \textit{.WORLD} file, and ii) to launch Turtlebot components (base, sensors, etc).
+This model was used in the paper for performing the experiments.
+
+
 ## The smart home file <!-- roslaunch turtlebot_gazebo my_turtlebot_world.launch -->
 To start the simulated smart home you need to run `smart_home.launch`. It will launch Gazebo with the smart home model (`simple_world_v2.world`) and a Turtlebot model. The smart home file is in WORLD format.<!-- that can be directly read by Gazebo (it is `simple_world_v2.world` which will be loaded using the launch file). --> It consists of the address to all 3D CAD models of the elements/objects in the smart home (including wall, cabinet, chair, sofa, table, etc) with the associated properties (being movable or static, collision and visual properties, etc). The pose of objects are extracted from the reconstructed point cloud of the environment and using Blender.
 
