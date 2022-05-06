@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+  <node pkg="package_home_model" type="move_turtlebot.py" name="move_turtlebot" output="screen" />    
+  <node pkg="package_home_model" type="record_odom.py" name="record_odometry" output="screen" />
+</launch>
+

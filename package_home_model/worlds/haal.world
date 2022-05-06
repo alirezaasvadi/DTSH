@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+	<world name="default">
+		<!-- A global light source -->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+
+		<!-- A ground plane -->
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+		
+	    <!-- smart home -->
+	    <model name="smart_home_cad_model">
+	      <pose>0 0 0  0 0 0</pose>
+	      <static>true</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/frame.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/frame.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="round_table">
+	      <pose>1.04674 -1.13306 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/round_table.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/round_table.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="chair_1">
+	      <pose>0.416323 -1.10586 0.005204 0 0 1.5708</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="chair_2">
+	      <pose>0.863222 -1.70178 0.005702 0 0 2.6529</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="chair_3">
+	      <!-- <pose>1.64033 -1.36594 0.003011 0 0 4.64258</pose> -->
+	      <pose>1.50033 -1.26594 0.003011 0 0 4.64258</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="chair_4">
+	      <!-- <pose>1.1045 -0.613382 0.003806 0 0 0</pose> -->
+	      <pose>0.8545 -0.713382 0.003806 0 0 0</pose>
+	      <mass>2.56</mass>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="short_table_1">
+	      <pose>1.30892 -2.37075 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="short_table_2">
+	      <pose>0.367197 -2.37075 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="short_table_3">
+	      <pose>-3.07246 -1.56393 0 0 0 1.5708</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="short_table_4">
+	      <pose>-3.07246 -0.7546 0 0 0 1.5708</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="pepper_1">
+	      <pose>0.470888 0.845262 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/robot_pepper.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/robot_pepper.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="pepper_2">
+	      <pose>-1.00539 0.830274 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/robot_pepper.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/robot_pepper.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="hanger">
+	      <pose>-1.50603 1.2848 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/hanger.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/hanger.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="stand_table">
+	      <pose>-2.51183 -0.31457 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/stand_table.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/stand_table.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="fauteuil">
+	      <pose>-1.55687 -1.49366 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/fauteuil.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/fauteuil.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="short_table_vie">
+	      <pose>-2.28994 -1.40219 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table_vie.dae</uri><scale>0.8 0.8 0.9</scale></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/short_table_vie.dae</uri><scale>0.8 0.8 0.9</scale></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="stand_light">
+	      <pose>-2.99282 -2.2508 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/stand_light.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/stand_light.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="pot">
+	      <pose>2.01308 -1.99246 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/pot.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/pot.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="stand">
+	      <pose>2.27342 -0.520524 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/stand.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/stand.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+	    <model name="suitcase">
+	      <pose>-0.511747 -2.31509 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/suitcase.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/suitcase.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+		 	 
+	</world>
+</sdf>
+

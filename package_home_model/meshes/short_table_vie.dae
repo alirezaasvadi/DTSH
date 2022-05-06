@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.82.7</authoring_tool>
+    </contributor>
+    <created>2021-09-06T13:53:59</created>
+    <modified>2021-09-06T13:53:59</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_geometries>
+    <geometry id="shape0-mesh" name="shape0">
+      <mesh>
+        <source id="shape0-mesh-positions">
+          <float_array id="shape0-mesh-positions-array" count="114">0.05050647 0.750038 0.386037 3.25616e-4 0.750038 0 0.05050647 0.750038 0 3.25616e-4 0.750038 0.386037 0.05050647 0.799922 0 0.05050647 0.799922 0.386037 0.800553 0.799922 0.386037 0.800335 0.750038 0.386037 0.800335 0.799922 0.386037 0.800506 0.0499221 0.386033 0.800506 3.82854e-5 0.386033 0.800553 2.34358e-5 0.386037 0.750326 0.0499221 0.386033 0.750155 0.750038 0.386037 0.750155 0.799922 0.386037 0.05050647 0.04990655 0.386037 0.05050647 2.27619e-5 0.386037 0.750326 3.82854e-5 0.386033 3.25616e-4 0.04990655 0.386037 3.25616e-4 0.799922 0.386037 3.25616e-4 0.799922 0 3.25616e-4 0.799922 0.420195 3.25616e-4 2.34358e-5 0.386037 3.25616e-4 2.34358e-5 0.420195 0.800553 0.799922 0.420195 0.750155 0.750038 0 0.750155 0.799922 0 0.800335 0.750038 0 0.800335 0.799922 0 0.800553 2.34358e-5 0.420195 0.800506 0.0499221 -3.27539e-6 0.800506 3.82854e-5 -3.27539e-6 0.750326 0.0499221 -3.27539e-6 0.750326 3.82854e-5 -3.27539e-6 0.05050647 0.04990655 0 0.05050647 2.27619e-5 0 3.25616e-4 0.04990655 0 3.25616e-4 2.27619e-5 0</float_array>
+          <technique_common>
+            <accessor source="#shape0-mesh-positions-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="shape0-mesh-normals">
+          <float_array id="shape0-mesh-normals-array" count="60">0 -1 0 1 0 0 0 0 -1 -0.001479208 5.4001e-6 -0.9999989 0.1011093 0 -0.9948754 0.08525067 0 -0.9963596 0 5.70408e-6 -1 0 5.70407e-6 -1 1.2168e-7 0 -1 8.53904e-7 0 -1 -5.6781e-6 5.32338e-6 -1 -0.0279383 0 -0.9996097 -1 0 0 0 1 0 0 -0.259703 -0.9656885 2.30985e-7 -0.2589691 -0.9658857 8.98475e-7 -1 0 -1.34294e-5 -1 3.14613e-4 -1.34294e-5 -1 1.74569e-6 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#shape0-mesh-normals-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="shape0-mesh-vertices">
+          <input semantic="POSITION" source="#shape0-mesh-positions"/>
+        </vertices>
+        <triangles count="80">
+          <input semantic="VERTEX" source="#shape0-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#shape0-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 1 0 0 0 3 0 4 1 0 1 2 1 0 1 4 1 5 1 6 2 7 2 8 2 7 3 6 3 9 3 9 4 6 4 10 4 10 5 6 5 11 5 7 6 12 6 13 6 12 7 7 7 9 7 14 2 0 2 5 2 0 8 14 8 15 8 15 2 14 2 16 2 16 9 14 9 13 9 16 10 13 10 17 10 17 11 13 11 12 11 0 2 18 2 3 2 18 2 0 2 15 2 19 12 1 12 3 12 1 12 19 12 20 12 4 2 1 2 20 2 1 2 4 2 2 2 19 13 4 13 20 13 4 13 19 13 5 13 21 12 22 12 23 12 22 12 21 12 18 12 18 12 21 12 3 12 3 12 21 12 19 12 5 2 3 2 19 2 3 2 5 2 0 2 21 13 5 13 19 13 5 13 21 13 14 13 14 13 21 13 8 13 8 13 21 13 6 13 6 13 21 13 24 13 8 2 13 2 14 2 13 2 8 2 7 2 14 12 25 12 13 12 25 12 14 12 26 12 7 0 25 0 27 0 25 0 7 0 13 0 28 1 7 1 27 1 7 1 28 1 8 1 6 1 29 1 11 1 29 1 6 1 24 1 11 14 17 14 10 14 17 15 11 15 16 15 16 16 11 16 29 16 16 17 29 17 22 17 22 0 29 0 23 0 30 1 10 1 31 1 10 1 30 1 9 1 9 2 17 2 12 2 17 2 9 2 10 2 12 13 30 13 32 13 30 13 12 13 9 13 12 12 33 12 17 12 33 12 12 12 32 12 15 2 22 2 18 2 22 2 15 2 16 2 34 1 16 1 35 1 16 1 34 1 15 1 18 13 34 13 36 13 34 13 18 13 15 13 22 12 36 12 37 12 36 12 22 12 18 12 14 13 28 13 26 13 28 13 14 13 8 13 28 2 25 2 26 2 25 2 28 2 27 2 16 0 37 0 35 0 37 18 16 18 22 18 10 0 33 0 31 0 33 0 10 0 17 0 30 2 33 2 32 2 33 2 30 2 31 2 34 2 37 2 36 2 37 2 34 2 35 2 29 19 21 19 23 19 21 19 29 19 24 19</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="node" name="node" type="NODE">
+        <matrix sid="transform">0.7 0 0 -0.2815205 0 0.7003261 0 -0.2809595 0 0 0.7879437 0 0 0 0 1</matrix>
+        <instance_geometry url="#shape0-mesh" name="node"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

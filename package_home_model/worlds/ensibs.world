@@ -1,0 +1,207 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+	<world name="default">
+		<!-- A global light source -->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+
+		<!-- A ground plane -->
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+		
+	    <!-- smart home  -->
+	    <model name="smart_home_cad_model">
+	      <pose>0 0 0  0 0 0</pose>
+	      <static>true</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/frame2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/frame2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+
+	    <!-- kitchen -->
+	    <model name="kitchen_table">
+		  <pose> 1.76 -1.4 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model> 
+
+	    <model name="chair_kitchen_1">
+		  <pose> 1. -1.28 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+
+	    <model name="chair_kitchen_2">
+		  <pose> 1.76 -.86 0 0 0 -90</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+
+	    <model name="chair_kitchen_3">
+		  <pose> 2.7 -1.56 0 0 0 -180</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+
+	    <!-- room 80-->
+	    <model name="room_table_1">
+		  <pose> -.2 -1. 0 0 0 1.57</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model> 
+
+	    <model name="room_table_2">
+		  <pose> -.2 .7 0 0 0 1.57</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model> 
+
+	    <model name="room_table_3">
+		  <pose> -2.6 3.2 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/table2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model> 
+
+	    <model name="chair_1">
+		  <pose> -.6 -.8 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+
+	    <model name="chair_2">
+		  <pose> -.6 .5 0 0 0 0</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+
+	    <model name="chair_3">
+		  <pose> -2.5 2.4 0 0 0 -180</pose>
+	      <static>false</static>
+	      <link name="body">
+		<visual name="visual">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+		</visual>
+		<collision name="collision">
+		  <geometry>
+		    <mesh><uri>model://smart_home/meshes/chair2.dae</uri></mesh>
+		  </geometry>
+	      </collision>
+	      </link>
+	    </model>
+
+	</world>
+</sdf>
+
